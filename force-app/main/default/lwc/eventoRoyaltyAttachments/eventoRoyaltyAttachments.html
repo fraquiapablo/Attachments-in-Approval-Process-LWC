@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-28-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <template if:true={isEventoRoyalty}>
+        <lightning-card title={headerTitle} icon-name="standard:attach">
+            <div class="my-datatable slds-p-around_medium">
+                <lightning-datatable
+                    data={files}
+                    columns={columns}
+                    key-field="Id"
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column="true"
+                    show-row-number-column="true">
+                </lightning-datatable>
+            </div>
+        </lightning-card>
+    </template>
+</template>
